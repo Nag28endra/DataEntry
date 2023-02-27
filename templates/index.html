@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Learning Plan</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Enter the Activity Done today</h1>
+      <form action="{{ url_for('submit') }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required>
+
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" name="activity" required>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
